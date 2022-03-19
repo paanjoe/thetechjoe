@@ -8,4 +8,5 @@ import * as Helper from './helper/enum';
 })
 export class AppComponent {
   public helper: any = Helper.helper;
+  public currentYear: number = new Date().getFullYear();
 }
