@@ -3,7 +3,7 @@
   <!-- Navbar Mobile -->
   <div class="navbar-brand">
     <a class="navbar-item ttj-button-primary" href="https://thetechjoe.com" target="_blank">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      <img src="../assets/logo.png" >
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarExampleTransparentExample">
@@ -51,17 +51,17 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="hero hero-background-dark is-link is-fullheight is-fullheight-with-navbar" >
+<section class="hero hero-background-dark is-link is-fullheight is-fullheight-with-navbar">
   <div class="hero-body">
     <div class="container">
-      <p class="ttj-primary is-size-4">{{ helper.HEADER_SUBTITLE_TOP }}</p>
-      <h1 class="is-size-1 ttj-white">
+      <p class="ttj-primary is-size-4 animate__animated animate__fadeInDown">{{ helper.HEADER_SUBTITLE_TOP }}</p>
+      <h1 class="is-size-1 ttj-white animate__animated animate__fadeInDown" style="animation-delay: 0.1s;">
         {{ helper.HEADER_TITLE }}
       </h1>
-      <h3 class="subtitle is-4 ttj-primary">
+      <h3 class="subtitle is-4 ttj-primary animate__animated animate__fadeInDown" style="animation-delay: 0.2s;">
         {{ helper.HEADER_SLOGAN }}
       </h3>
-      <p class="ttj-white subtitle is-5" style="max-width: 610px; text-align: justify;">
+      <p class="ttj-white subtitle is-5 animate__animated animate__fadeInDown" style="max-width: 610px; text-align: justify; animation-delay: 0.3s; animation-duration: 800ms;">
         {{ helper.HEADER_DESCRIPTION }}
       </p>
       <a href="#about" class="button ttj-button-primary" style="max-width: 610px; width: 100%;">
@@ -94,7 +94,7 @@
     <div class="tile is-ancestor">
       <div class="tile is-parent">
         <article class="tile is-child box box-about">
-          <p class="title ttj-primary">{{helper.ABOUT_STACK_TITLE}}</p>
+          <p class="title ttj-primary" style="margin-bottom: 0px">{{helper.ABOUT_STACK_TITLE}}</p>
           <article class="media">
             <div class="media-content">
               <div class="content">
@@ -150,21 +150,22 @@
     <hr />
   </div>
   <div class="section-body">
-    <div class="columns is-mobile">
+    <div *ngFor="let itm of featured" class="columns is-mobile">
       <div class="column">
         <div class="box box-about" style="height: 100%; max-height: 300px;">
           <div class="content">
             <div class="block ttj-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mollis sapien libero, vitae venenatis mauris malesuada eu. Morbi varius ligula non bibendum aliquet.
+              <h4 class="ttj-primary">{{itm.title}}</h4>
+              {{itm.description}}
             </div>
           </div>
         </div>
       </div>
       <div class="column is-one-third">
-        <div class="box box-about" style="height: 100%; max-height: 300px;">
+        <div class="box box-about" style="height: 100%; max-height: 300px;background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;">
           <div class="content">
             <figure class="image is-4by3">
-              <img src="https://bulma.io/images/placeholders/640x480.png">
+              <img  src="{{itm.imageURL}}">
             </figure>
           </div>
         </div>
@@ -181,19 +182,21 @@
   </div>
   <div class="container">
     <div class="columns is-multiline">
-      <div class="column is-half">
-        <div class="card box-about">
+      <div *ngFor="let itm of gh_repos" class="column is-half" >
+        <div  class="card box-about" style="height: 100%;" >
           <div class="card-content">
             <div class="content ttj-white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-              <a class="ttj-primary" href="#">@bulmaio</a>. <a class="ttj-primary" href="#">#css</a> <a class="ttj-primary" href="#">#responsive</a>
+              <h4 class="ttj-primary is-4">{{itm.name}}</h4>
+              Description: {{itm.description}}
+              <br/>
+              Language: <a class="ttj-primary" href="#">{{itm.language}}</a>
               <br>
-              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              Created Date: {{itm.created_at}}
             </div>
           </div>
           <footer class="card-footer" style="border-color: hsl(153, 100%, 50%) !important;">
-            <a href="#" class="card-footer-item ttj-button-primary">Save</a>
-            <a href="#" class="card-footer-item ttj-button-primary">Delete</a>
+            <a href="{{itm.html_url}}" target="_blank" class="card-footer-item ttj-button-primary">Go to Repositories&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
+            <button (click)="copyToClipboard(itm.ssh_url)" class="card-footer-item ttj-button-primary">Git Clone&nbsp;<i class="fa-solid fa-copy"></i></button>
           </footer>
         </div>
       </div>
@@ -222,49 +225,59 @@
   </div>
   <div class="columns is-centered">
     <div class="column is-2">
+      <a href="{{helper.CV_LINK}}" target="_blank">
       <div class="card">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-          </figure>
+        <div class="card-content box-about" style="text-align: center;">
+          <i class="fas fa-download fa-2xl" style="color:hsl(153, 100%, 50%) !important;"></i>
+          <br/><br/>
+          Download CV
         </div>
       </div>
+    </a>
     </div>
     <div class="column is-2">
+      <a href="{{helper.LINKEDIN_LINK}}" target="_blank">
       <div class="card">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-          </figure>
+        <div class="card-content box-about" style="text-align: center;">
+          <i class="fa-brands fa-linkedin fa-2xl" style="color: hsl(153, 100%, 50%);"></i>
+          <br/><br/>
+          LinkedIn
         </div>
       </div>
+    </a>
     </div>
     <div class="column is-2">
+      <a href="{{helper.GITHUB_LINK}}" target="_blank">
       <div class="card">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-          </figure>
+        <div class="card-content box-about" style="text-align: center;">
+          <i class="fa-brands fa-github-square fa-2xl" style="color: hsl(153,100%, 50%);"></i>
+          <br/><br/>
+          GitHub
         </div>
       </div>
+    </a>
     </div>
     <div class="column is-2">
+      <a href="{{helper.MEDIUM_LINK}}" target="_blank">
       <div class="card">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-          </figure>
+        <div class="card-content box-about" style="text-align: center;">
+          <i class="fa-brands fa-medium fa-2xl" style="color: hsl(153,100%, 50%);"></i>
+          <br/><br/>
+          Medium
         </div>
       </div>
+    </a>
     </div>
     <div class="column is-2">
+      <a href="{{helper.DEV_LINK}}" target="_blank">
       <div class="card">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-          </figure>
+        <div class="card-content box-about" style="text-align: center;">
+          <i class="fa-brands fa-dev fa-2xl" style="color: hsl(153,100%, 50%);"></i>
+          <br/><br/>
+          Dev.to
         </div>
       </div>
+    </a>
     </div>
   </div>
 

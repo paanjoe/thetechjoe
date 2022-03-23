@@ -5,10 +5,19 @@
             "position": "Intern",
             "jobscope": [
                 {
-                    "item": "Responsible to develop a responsive web apps for Employee Training Record"
+                    "item": "Responsible to develop a responsive web apps for Employee Training Record."
                 },
                 {
-                    "item": "Responsible to conduct"
+                    "item": "Responsible to conduct training assessment for PETRONAS Carigali employee."
+                },
+                {
+                    "item": "Knowledge Transfer to the team in the area of Software Development."
+                },
+                {
+                    "item": "Deployment of the web apps into Production environment and ensure the apps is secured."
+                },
+                {
+                    "item": "Business continuity support and documentation."
                 }
             ]
         },
@@ -17,10 +26,19 @@
             "position": "Senior Executives",
             "jobscope": [
                 {
-                    "item": "Responsible to develop a responsive web apps for Employee Training Record"
+                    "item": "Mentor & Lead software development project that involves various Stakeholder (public/internal)."
                 },
                 {
-                    "item": "Responsible to conduct"
+                    "item": "Participate and organize UAT session with relevant stakeholders."
+                },
+                {
+                    "item": "Ensure all the assigned web apps met Organization security standard and compliances."
+                },
+                {
+                    "item": "Participate in a team/departmental/organization discussion to give a technical opinion and architecture advices."
+                },
+                {
+                    "item": "Require to support existing web apps and also need to make sure the documentation is up-to-date for references."
                 }
             ]
         },
@@ -29,10 +47,19 @@
             "position": "Senior System Analyst",
             "jobscope": [
                 {
-                    "item": "Responsible to develop a responsive web apps for Employee Training Record"
+                    "item": "Responsible to lead the Payment Team to deliver a Real-Time Payment Platform (RPP) for EPF."
                 },
                 {
-                    "item": "Responsible to conduct"
+                    "item": "Fully responsible to create a new framework for the team, KPI planning, and also strategic objectives."
+                },
+                {
+                    "item": "Be the key-person for the stakeholder to connect and also responsible to present project progress to the top management (C-Levels) directly."
+                },
+                {
+                    "item": "Vendor management for Tender process and also Stakeholder management to get input and comply to the Central Bank of Malaysia on implementing this solution."
+                },
+                {
+                    "item": "Design and develop end-to-end software architecture and to be presented on Monthly Enterprise Architecture forum."
                 }
             ]
         },
@@ -41,10 +68,19 @@
             "position": "Senior Software Engineer",
             "jobscope": [
                 {
-                    "item": "Responsible to develop a responsive web apps for Employee Training Record"
+                    "item": "A full-stack software engineer that is responsible to maintain their existing products called TEMS Director (Fleet Management software)."
                 },
                 {
-                    "item": "Responsible to conduct"
+                    "item": "Resonsible to create and improve the web apps Unit Testing using Karma."
+                },
+                {
+                    "item": "Participate and contribute to Agile methodologies. Sometimes require to be Scrum Master if the current Scrum Master is unavailable."
+                },
+                {
+                    "item": "Engage with the West Team in Sweden to get more information or discuss on certain products feature."
+                },
+                {
+                    "item": "Responsible to migrate the existing on-premise web apps into cloud (Azure) platform."
                 }
             ]
         },
@@ -53,10 +89,19 @@
             "position": "Senior Full Stack Developer",
             "jobscope": [
                 {
-                    "item": "Responsible to develop a responsive web apps for Employee Training Record"
+                    "item": "Responsible to develop a web apps that help IT Infrastructure team to diagnose, troubleshoot, or view information on particular item in ExxonMobil."
                 },
                 {
-                    "item": "Responsible to conduct"
+                    "item": "Require to develop an automation scripts for the Internet Hosting team to automate their daily task."
+                },
+                {
+                    "item": "Responsible to train junior developer on basic fundamental of software and network architecture."
+                },
+                {
+                    "item": "Provide input and direction on feature planning."
+                },
+                {
+                    "item": "Fully responsible to develop new documentation guideline using Atlassian software so others would follow the standard practice."
                 }
             ]
         },
@@ -65,10 +110,19 @@
             "position": "Senior Software Engineer",
             "jobscope": [
                 {
-                    "item": "Responsible to develop a responsive web apps for Employee Training Record"
+                    "item": "Responsible to develop or improve the current Legal, Tax, and Consolidation in BASF globally."
                 },
                 {
-                    "item": "Responsible to conduct"
+                    "item": "Require to master Legal and Tax business process globally since each country has its own law and regulations."
+                },
+                {
+                    "item": "Translate the business process into technical products and always need to find a way to improve the technical process so that it is going to be easy to maintain."
+                },
+                {
+                    "item": "Digital Transformation by 2025 is to have fully Data Intelligence and Software Intelligence driven to minimize maintenance."
+                },
+                {
+                    "item": "Explore into Microsoft Low Code/No Code products, AI Builder, SAP products."
                 }
             ]
         }
