@@ -2,7 +2,7 @@
 
   <!-- Navbar Mobile -->
   <div class="navbar-brand">
-    <a class="navbar-item ttj-button-primary" href="https://thetechjoe.com" target="_blank">
+    <a class="navbar-item ttj-button-primary" href="https://paanjoe.com" target="_blank">
       <img src="../assets/logo.png" >
     </a>
 
@@ -284,11 +284,32 @@
   <div class="columns">
     <div class="column">
       <div class="box box-about">
+        <article class="message is-primary" (click)="closeModal($event)">
+          <div class="message-header">
+            <p>Success!</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            Email has been <strong>successfully</strong> sent! Our team will respond to you shortly.
+          </div>
+        </article>
+
+        <article class="message is-danger">
+          <div class="message-header">
+            <p>Failed!</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <strong>Opps!</strong> Something went wrong, please try again or contact this site Administrator to asssit you on this.
+          </div>
+        </article>
+
+        <!-- <form> -->
         <div class="field is-horizontal">
           <div class="field-body">
             <div class="field">
               <p class="control is-expanded has-icons-left">
-                <input class="input ttj-input-primary" type="text" placeholder="Your Name">
+                <input class="input ttj-input-primary" type="text" name="name" [(ngModel)]="name_contact" placeholder="Your Name">
                 <span class="icon is-small is-left ttj-icon">
                   <i class="fas fa-user"></i>
                 </span>
@@ -296,7 +317,7 @@
             </div>
             <div class="field">
               <p class="control is-expanded has-icons-left">
-                <input class="input ttj-input-primary" type="email" placeholder="Your Email">
+                <input class="input ttj-input-primary" type="email" [(ngModel)]="email_contact" placeholder="Your Email">
                 <span class="icon is-small is-left ttj-icon">
                   <i class="fas fa-envelope"></i>
                 </span>
@@ -309,7 +330,7 @@
           <div class="field-body">
             <div class="field">
               <div class="control has-icons-left">
-                <input class="input ttj-input-primary" type="text" placeholder="Subject">
+                <input class="input ttj-input-primary" type="text" [(ngModel)]="subject_contact" placeholder="Subject">
                 <span class="icon is-small is-left ttj-icon">
                   <i class="fas fa-pen"></i>
                 </span>
@@ -322,7 +343,7 @@
           <div class="field-body">
             <div class="field">
               <div class="control has-icons-left">
-                <textarea class="textarea ttj-input-primary" placeholder="Message..."></textarea>
+                <textarea class="textarea ttj-input-primary" [(ngModel)]="message_contact" placeholder="Message..."></textarea>
               </div>
             </div>
           </div>
@@ -332,13 +353,14 @@
           <div class="field-body">
             <div class="field">
               <div class="control">
-                <button class="button ttj-button-primary">
+                <button class="button ttj-button-primary" (click)="contactUs(this.name_contact, this.email_contact, this.subject_contact, this.message_contact)">
                   {{helper.CONTACT_BUTTON_SEND}}
                 </button>
               </div>
             </div>
           </div>
         </div>
+      <!-- </form> -->
       </div>
     </div>
   </div>
@@ -347,9 +369,9 @@
 <footer class="footer hero-background-dark" style="padding-bottom:2em;">
   <div class="section-heading">
     <div class="block ttj-footer">
-      Designed & Built by <strong class="ttj-primary">TheTechJoe (PaanJoe)</strong>
+      Designed & Built by <strong class="ttj-primary"> PaanJoe</strong>
       <br/>
-      All Rights Reserved {{currentYear}} &copy; <strong class="ttj-primary">TheTechJoe (PaanJoe)</strong>
+      All Rights Reserved {{currentYear}} &copy; <strong class="ttj-primary"> PaanJoe</strong>
     </div>
   </div>
 </footer>

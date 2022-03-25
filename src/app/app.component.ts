@@ -22,6 +22,10 @@ export class AppComponent {
   public expJobScope: any = [];
   public featured = (<any>featured).featured;
   public gh_repos: Github[] = [];
+  public name_contact: string = '';
+  public email_contact: string = '';
+  public subject_contact: string = '';
+  public message_contact: string = '';
 
   constructor(
     private githubServices: GithubService
@@ -52,5 +56,17 @@ export class AppComponent {
     htmlElement.select();
     document.execCommand('copy');
     document.body.removeChild(htmlElement);
+  }
+
+  contactUs(name: string, email: string, subject: string, message: string) {
+    // validation here
+
+    this.githubServices.sendEmail(name, email, subject, message).subscribe((response) => {
+      console.log('Success, ' + response);
+    });
+  }
+
+  closeModal(data: any) {
+    console.log(data)
   }
 }

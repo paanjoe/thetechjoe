@@ -1,6 +1,6 @@
 export enum helper {
     // HEADER
-    HEADER_TITLE = "<TheTechJoe/>",
+    HEADER_TITLE = "<PaanJoe/>",
     HEADER_SUBTITLE_TOP = "Hello! I am",
     HEADER_SLOGAN = "Full Stack Software Developer | A Ninja Father and Husband",
     HEADER_DESCRIPTION = "🇲🇾-based Software Engineer who love to speak in Typescript. I love to build web apps that I think it might be useful to everyone! A 👨‍💻 slave who consistently helping to improve Organization Digitalization agenda 🤩. Currently trying to master AI 🤖 and also trying to be an awesome father and husband 👨‍👩‍👧‍👦.",
@@ -30,5 +30,6 @@ export enum helper {
     LINKEDIN_LINK = "https://www.linkedin.com/in/mohd-farhan-muhamad-fazli-693b7912b/",
     MEDIUM_LINK = "https://medium.com/@farhan.gunz",
     DEV_LINK = "https://dev.to/paanjoe",
-    GITHUB_LINK = "https://github.com/paanjoe"
+    GITHUB_LINK = "https://github.com/paanjoe",
+    FORMSPRING_LINK = "https://formspree.io/f/xwkynpvw"
 }

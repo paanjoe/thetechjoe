@@ -5,6 +5,7 @@ import { catchError } from 'rxjs/operators';
 import { helper } from '../helper/enum';
 import { environment } from 'src/environments/environment.prod';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -41,4 +42,12 @@ export class GithubService {
     }
     return throwError(errorMessage);
  }
+
+ sendEmail(name: string, email: string, subject: string, message: string): Observable<any> {
+  const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+  return this.httpClient.post(helper.FORMSPRING_LINK, {
+    name: name, replyto: email, message: message, subject: subject
+  }, {headers: headers }).pipe(catchError(this.errorHandler));
+ }
+
 }
