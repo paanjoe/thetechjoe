@@ -1,3 +1,12 @@
+
+
+
+<div *ngIf="isLoading === true" class="test">
+  <div id="loading"></div>
+</div>
+
+
+<div *ngIf="isLoading === false">
 <nav class="navbar is-link  hero-background-dark">
 
   <!-- Navbar Mobile -->
@@ -365,6 +374,7 @@
     </div>
   </div>
 </section>
+
 <!-- Footer -->
 <footer class="footer hero-background-dark" style="padding-bottom:2em;">
   <div class="section-heading">
@@ -375,6 +385,7 @@
     </div>
   </div>
 </footer>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -403,17 +414,4 @@
 
 });
 </script>
-
-<script>
-    $(document).ready(function() {
-
-    // Check for click events on the navbar burger icon
-    $(".navbar-burger").click(function() {
-
-    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-    $(".navbar-burger").toggleClass("is-active");
-    $(".navbar-menu").toggleClass("is-active");
-
-});
-});
-</script>
+</div>

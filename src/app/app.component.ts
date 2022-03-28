@@ -26,6 +26,7 @@ export class AppComponent {
   public email_contact: string = '';
   public subject_contact: string = '';
   public message_contact: string = '';
+  public isLoading: boolean = false;
 
   constructor(
     private githubServices: GithubService
@@ -33,6 +34,9 @@ export class AppComponent {
 
 
   ngOnInit() {
+    // Loading Page
+    this.startloading();
+    
     this.viewexp(this.expList[0].position, this.expList[0].jobscope);
     this.githubServices.getAll().subscribe((response: Github[]) => {
       response = response.filter((data) => {
@@ -41,7 +45,15 @@ export class AppComponent {
       // this.gh_repos.push(...response.slice(0,4));
       this.gh_repos.push(...response);
       console.log(this.gh_repos)
-    })
+    });
+
+
+  }
+
+  startloading() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 5000);
   }
 
   viewexp(position: string, jobscope: any) {
