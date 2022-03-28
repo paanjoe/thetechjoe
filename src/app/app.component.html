@@ -1,439 +1,624 @@
-
-
-
-<div *ngIf="isLoading === true" class="test">
-
-</div>
-
+<div *ngIf="isLoading === true" class="test"></div>
 
 <div *ngIf="isLoading === false">
-<nav class="navbar is-link  hero-background-dark">
+  <nav class="navbar is-link hero-background-dark">
+    <!-- Navbar Mobile -->
+    <div class="navbar-brand">
+      <a
+        class="navbar-item ttj-button-primary"
+        href="https://paanjoe.com"
+        target="_blank"
+      >
+        <img src="../assets/logo.png" />
+      </a>
 
-  <!-- Navbar Mobile -->
-  <div class="navbar-brand">
-    <a class="navbar-item ttj-button-primary" href="https://paanjoe.com" target="_blank">
-      <img src="../assets/logo.png" >
-    </a>
-
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarExampleTransparentExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <!-- Navbar Desktop -->
-  <div id="navbarExampleTransparentExample" class="navbar-menu hero-background-dark"  >
-    <div class="navbar-end">
-      <a class="navbar-item ttj-button-primary" href="#about">
-        <span class="icon">
-          <i class="fas fa-info"></i>
-        </span>
-        <span>About</span>
-      </a>
-      <a class="navbar-item ttj-button-primary" href="#experiences">
-        <span class="icon">
-          <i class="fas fa-bars"></i>
-        </span>
-        <span>Experiences</span>
-      </a>
-      <a class="navbar-item ttj-button-primary" href="#featured">
-        <span class="icon">
-          <i class="fas fa-th-list"></i>
-        </span>
-        <span>Featured</span>
-      </a>
-      <a class="navbar-item ttj-button-primary" href="#github">
-        <span class="icon">
-          <i class="fab fa-github"></i>
-        </span>
-        <span>GitHub Repositories</span>
-      </a>
-      <a class="navbar-item ttj-button-primary" href="#contact">
-        <span class="icon">
-          <i class="fas fa-envelope"></i>
-        </span>
-        <span>Contact</span>
+      <a
+        role="button"
+        class="navbar-burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navbarExampleTransparentExample"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
     </div>
-  </div>
-</nav>
 
-<!-- Hero Section -->
-<section class="hero hero-background-dark is-link is-fullheight is-fullheight-with-navbar">
-  <div class="hero-body">
-    <div class="container animate__animated animate__zoomInDown" style="animation-duration: 1.5s;">
-      <p class="ttj-primary is-size-4">{{ helper.HEADER_SUBTITLE_TOP }}</p>
-      <h1 class="is-size-1 ttj-white">
-        {{ helper.HEADER_TITLE }}
-      </h1>
-      <h3 class="subtitle is-4 ttj-primary ">
-        {{ helper.HEADER_SLOGAN }}
-      </h3>
-      <p class="ttj-white subtitle is-5" style="max-width: 610px; text-align: justify;">
-        {{ helper.HEADER_DESCRIPTION }}
-      </p>
-      <a href="#about" class="button ttj-button-primary" style="max-width: 610px; width: 100%;">
-        {{ helper.HEADER_BUTTON }}
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- About Me -->
-<section class="section hero-background-dark section-about">
-  <div class="section-heading animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
-    <a href="#about" id="about"><h3 class="title is-2 ttj-primary is-size-3-mobile"><span class="ttj-white"># </span>{{helper.ABOUT_TITLE}}</h3></a>
-    <hr />
-    <div class="tile is-ancestor">
-      <div class="tile is-parent" >
-        <article class="tile is-child box box-about">
-          <p class="title ttj-primary">{{helper.ABOUT_TITLE_PARA}}</p>
-          <p class="subtitle is-6 ttj-white" style="max-width: 610px; text-align: justify;">{{helper.ABOUT_PARA}}</p>
-        </article>
-      </div>
-      <div class="tile is-parent">
-        <article class="tile is-child box box-about">
-          <figure class="image is-4by4">
-            <img src="{{helper.ABOUT_PICTURE}}" class="ttj-profile-picture">
-          </figure>
-        </article>
+    <!-- Navbar Desktop -->
+    <div
+      id="navbarExampleTransparentExample"
+      class="navbar-menu hero-background-dark"
+    >
+      <div class="navbar-end">
+        <a class="navbar-item ttj-button-primary" href="#about">
+          <span class="icon">
+            <i class="fas fa-info"></i>
+          </span>
+          <span>About</span>
+        </a>
+        <a class="navbar-item ttj-button-primary" href="#experiences">
+          <span class="icon">
+            <i class="fas fa-bars"></i>
+          </span>
+          <span>Experiences</span>
+        </a>
+        <a class="navbar-item ttj-button-primary" href="#featured">
+          <span class="icon">
+            <i class="fas fa-th-list"></i>
+          </span>
+          <span>Featured</span>
+        </a>
+        <a class="navbar-item ttj-button-primary" href="#github">
+          <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+          <span>GitHub Repositories</span>
+        </a>
+        <a class="navbar-item ttj-button-primary" href="#contact">
+          <span class="icon">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span>Contact</span>
+        </a>
       </div>
     </div>
-    <div class="tile is-ancestor">
-      <div class="tile is-parent">
-        <article class="tile is-child box box-about">
-          <p class="title ttj-primary" style="margin-bottom: 0px">{{helper.ABOUT_STACK_TITLE}}</p>
-          <article class="media">
-            <div class="media-content">
-              <div class="content">
-                <ul>
-                  <li *ngFor="let itm of stackList">
-                    <strong class="ttj-white">{{itm.stack}}</strong>
-                  </li>
-                </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section
+    class="hero hero-background-dark is-link is-fullheight is-fullheight-with-navbar"
+  >
+    <div class="hero-body">
+      <div
+        class="container animate__animated animate__zoomInDown"
+        style="animation-duration: 1.5s"
+      >
+        <p class="ttj-primary is-size-4">{{ helper.HEADER_SUBTITLE_TOP }}</p>
+        <h1 class="is-size-1 ttj-white">
+          {{ helper.HEADER_TITLE }}
+        </h1>
+        <h3 class="subtitle is-4 ttj-primary">
+          {{ helper.HEADER_SLOGAN }}
+        </h3>
+        <p
+          class="ttj-white subtitle is-5"
+          style="max-width: 610px; text-align: justify"
+        >
+          {{ helper.HEADER_DESCRIPTION }}
+        </p>
+        <a
+          href="#about"
+          class="button ttj-button-primary"
+          style="max-width: 610px; width: 100%"
+        >
+          {{ helper.HEADER_BUTTON }}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section class="section hero-background-dark section-about">
+    <div
+      class="section-heading animate__animated animate__fadeInUp"
+      style="animation-duration: 1.5s"
+    >
+      <a href="#about" id="about"
+        ><h3 class="title is-2 ttj-primary is-size-3-mobile">
+          <span class="ttj-white"># </span>{{ helper.ABOUT_TITLE }}
+        </h3></a
+      >
+      <hr />
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <article class="tile is-child box box-about">
+            <p class="title ttj-primary">{{ helper.ABOUT_TITLE_PARA }}</p>
+            <p
+              class="subtitle is-6 ttj-white"
+              style="max-width: 610px; text-align: justify"
+            >
+              {{ helper.ABOUT_PARA }}
+            </p>
+          </article>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child box box-about">
+            <figure class="image is-4by4">
+              <img
+                src="{{ helper.ABOUT_PICTURE }}"
+                class="ttj-profile-picture"
+              />
+            </figure>
+          </article>
+        </div>
+      </div>
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <article class="tile is-child box box-about">
+            <p class="title ttj-primary" style="margin-bottom: 0px">
+              {{ helper.ABOUT_STACK_TITLE }}
+            </p>
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <ul>
+                    <li *ngFor="let itm of stackList">
+                      <strong class="ttj-white">{{ itm.stack }}</strong>
+                    </li>
+                  </ul>
+                </div>
               </div>
+            </article>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experiences -->
+  <section class="section hero-background-dark section-about">
+    <div
+      class="section-heading animate__animated animate__fadeInUp"
+      style="animation-duration: 1.5s"
+    >
+      <a href="#experiences" id="experiences"
+        ><h3 class="title is-2 ttj-primary is-size-3-mobile">
+          <span class="ttj-white"># </span>{{ helper.EXP_TITLE }}
+        </h3></a
+      >
+      <hr />
+      <div class="columns">
+        <div class="column is-one-third">
+          <aside class="menu box-about box">
+            <p class="menu-label ttj-white subtitle is-6">
+              Working Experiences
+            </p>
+            <ul class="menu-list">
+              <div
+                *ngFor="
+                  let itm of expList;
+                  let isFirstRow = first;
+                  let i = index
+                "
+              >
+                <li (click)="viewexp(itm.position, itm.jobscope)">
+                  <a class="ttj-button-primary">{{ itm.company }}</a>
+                </li>
+              </div>
+            </ul>
+          </aside>
+        </div>
+        <div class="column">
+          <div class="box box-about" style="height: 100%">
+            <p class="subtitle is-5 ttj-primary">{{ expPosition }}</p>
+            <ul class="menu-list">
+              <li
+                class="menu-list ttj-white"
+                style="margin: 10px"
+                *ngFor="let itm of expJobScope"
+              >
+                <span class="ttj-primary">>_</span> {{ itm.item }}
+              </li>
+            </ul>
+            <!-- <p class="subtitle is-6 ttj-white">{{expJobScope}}</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="section hero-background-dark section-about">
+    <div
+      class="section-heading animate__animated animate__fadeInUp"
+      style="animation-duration: 1.5s"
+    >
+      <a href="#featured" id="featured"
+        ><h3 class="title is-2 ttj-primary is-size-3-mobile">
+          <span class="ttj-white"># </span>{{ helper.FEATURED_TITLE }}
+        </h3></a
+      >
+      <hr />
+    </div>
+    <div
+      class="section-body animate__animated animate__fadeInUp"
+      style="animation-duration: 1.5s"
+    >
+      <div *ngFor="let itm of featured" class="columns is-desktop">
+        <div class="column">
+          <div class="box box-about" style="height: 100%">
+            <div class="content">
+              <div class="block ttj-white">
+                <h4 class="ttj-primary">{{ itm.title }}</h4>
+                {{ itm.description }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div
+            class="box box-about"
+            style="
+              height: 100%;
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: 50% 50%;
+            "
+          >
+            <div class="content">
+              <figure class="image is-4by3">
+                <img src="{{ itm.imageURL }}" />
+                <!-- <img  src="../assets/carilocum.png"> -->
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub Repositories -->
+  <section class="section hero-background-dark section-about">
+    <div
+      class="section-heading animate__animated animate__fadeInUp"
+      style="animation-duration: 1.5s"
+    >
+      <a href="#github" id="github"
+        ><h3 class="title is-2 ttj-primary is-size-3-mobile">
+          <span class="ttj-white"># </span>{{ helper.GH_TITLE }}
+        </h3></a
+      >
+      <hr />
+    </div>
+    <div
+      class="container animate__animated animate__fadeInUp"
+      style="animation-duration: 1.5s"
+    >
+      <div class="columns is-multiline">
+        <div *ngFor="let itm of gh_repos" class="column is-half">
+          <div class="card box-about" style="height: 100%">
+            <div class="card-content">
+              <div class="content ttj-white">
+                <h4 class="ttj-primary is-4">{{ itm.name }}</h4>
+                Description: {{ itm.description }}
+                <br />
+                Language: <a class="ttj-primary" href="#">{{ itm.language }}</a>
+                <br />
+                Created Date: {{ itm.created_at }}
+              </div>
+            </div>
+            <footer
+              class="card-footer"
+              style="border-color: hsl(153, 100%, 50%) !important"
+            >
+              <a
+                href="{{ itm.html_url }}"
+                target="_blank"
+                class="card-footer-item ttj-button-primary"
+                >Go to Repositories&nbsp;<i
+                  class="fa-solid fa-up-right-from-square"
+                ></i
+              ></a>
+              <button
+                (click)="copyToClipboard(itm.ssh_url)"
+                class="card-footer-item ttj-button-primary"
+              >
+                Git Clone&nbsp;<i class="fa-solid fa-copy"></i>
+              </button>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div
+      class="columns is-mobile is-centered animate__animated animate__fadeInUp"
+      style="animation-duration: 1.5s"
+    >
+      <div class="column is-half">
+        <a
+          target="_blank"
+          href="https://github.com/paanjoe"
+          class="button ttj-button-primary is-responsive is-fullwidth"
+        >
+          <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section hero-background-dark section-about" id="contact">
+    <div
+      class="section-heading animate__animated animate__fadeInUp"
+      style="animation-duration: 1.5s"
+    >
+      <a href="#contact" id="contact"
+        ><h3 class="title is-2 ttj-primary is-size-3-mobile">
+          <span class="ttj-white"># </span>{{ helper.CONTACT_TITLE }}
+        </h3></a
+      >
+      <hr />
+    </div>
+    <div
+      class="columns is-centered animate__animated animate__fadeInUp"
+      style="animation-duration: 1.5s"
+    >
+      <div class="column is-2">
+        <a href="{{ helper.CV_LINK }}" target="_blank">
+          <div class="card">
+            <div class="card-content box-about" style="text-align: center">
+              <i
+                class="fas fa-download fa-2xl"
+                style="color: hsl(153, 100%, 50%) !important"
+              ></i>
+              <br /><br />
+              Download CV
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="column is-2">
+        <a href="{{ helper.LINKEDIN_LINK }}" target="_blank">
+          <div class="card">
+            <div class="card-content box-about" style="text-align: center">
+              <i
+                class="fa-brands fa-linkedin fa-2xl"
+                style="color: hsl(153, 100%, 50%)"
+              ></i>
+              <br /><br />
+              LinkedIn
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="column is-2">
+        <a href="{{ helper.GITHUB_LINK }}" target="_blank">
+          <div class="card">
+            <div class="card-content box-about" style="text-align: center">
+              <i
+                class="fa-brands fa-github-square fa-2xl"
+                style="color: hsl(153, 100%, 50%)"
+              ></i>
+              <br /><br />
+              GitHub
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="column is-2">
+        <a href="{{ helper.MEDIUM_LINK }}" target="_blank">
+          <div class="card">
+            <div class="card-content box-about" style="text-align: center">
+              <i
+                class="fa-brands fa-medium fa-2xl"
+                style="color: hsl(153, 100%, 50%)"
+              ></i>
+              <br /><br />
+              Medium
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="column is-2">
+        <a href="{{ helper.DEV_LINK }}" target="_blank">
+          <div class="card">
+            <div class="card-content box-about" style="text-align: center">
+              <i
+                class="fa-brands fa-dev fa-2xl"
+                style="color: hsl(153, 100%, 50%)"
+              ></i>
+              <br /><br />
+              Dev.to
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="columns animate__animated animate__fadeInUp"
+      style="animation-duration: 1.5s"
+    >
+      <div class="column">
+        <div class="box box-about">
+          <article
+            *ngIf="contactSuccess === true"
+            class="message is-primary"
+            (click)="closeModal($event)"
+          >
+            <div class="message-header">
+              <p>Success!</p>
+              <button class="delete" aria-label="delete"></button>
+            </div>
+            <div class="message-body">
+              Email has been <strong>successfully</strong> sent! Our team will
+              respond to you shortly.
             </div>
           </article>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Professional Experiences -->
-<section class="section hero-background-dark section-about" >
-  <div class="section-heading animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
-    <a href="#experiences" id="experiences"><h3 class="title is-2 ttj-primary is-size-3-mobile"><span class="ttj-white"># </span>{{helper.EXP_TITLE}}</h3></a>
-    <hr />
-    <div class="columns">
-      <div class="column is-one-third">
-        <aside class="menu box-about box">
-          <p class="menu-label ttj-white subtitle is-6">
-            Working Experiences
-          </p>
-          <ul class="menu-list">
-            <div *ngFor="let itm of expList; let isFirstRow = first; let i = index;">
-            <li (click)="viewexp(itm.position, itm.jobscope);"><a class="ttj-button-primary">{{itm.company}}</a></li>
+          <article
+            *ngIf="contactFailed === true"
+            class="message is-danger"
+            (click)="closeModal($event)"
+          >
+            <div class="message-header">
+              <p>Failed!</p>
+              <button class="delete" aria-label="delete"></button>
             </div>
-          </ul>
-        </aside>
-      </div>
-      <div class="column">  
-        <div class="box box-about" style="height: 100%">
-          <p class="subtitle is-5 ttj-primary">{{expPosition}}</p>
-          <ul class="menu-list">
-              <li class="menu-list ttj-white" style="margin: 10px;" *ngFor="let itm of expJobScope;"><span class="ttj-primary">>_</span> {{itm.item}}</li>
-          </ul>
-          <!-- <p class="subtitle is-6 ttj-white">{{expJobScope}}</p> -->
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Featured Projects -->
-<section class="section hero-background-dark section-about">
-  <div class="section-heading animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
-    <a href="#featured" id="featured"><h3 class="title is-2 ttj-primary is-size-3-mobile"><span class="ttj-white"># </span>{{helper.FEATURED_TITLE}}</h3></a>
-    <hr />
-  </div>
-  <div class="section-body animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
-    <div *ngFor="let itm of featured" class="columns is-desktop">
-      <div class="column">
-        <div class="box box-about" style="height: 100%; ">
-          <div class="content">
-            <div class="block ttj-white">
-              <h4 class="ttj-primary">{{itm.title}}</h4>
-              {{itm.description}}
+            <div class="message-body">
+              <strong>Opps!</strong> Something went wrong, please try again or
+              contact this site Administrator to asssit you on this.
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="column is-one-third">
-        <div class="box box-about" style="height: 100%;background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;">
-          <div class="content">
-            <figure class="image is-4by3">
-              <img  src="{{itm.imageURL}}">
-              <!-- <img  src="../assets/carilocum.png"> -->
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+          </article>
 
-<!-- GitHub Repositories -->
-<section class="section hero-background-dark section-about">
-  <div class="section-heading animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
-    <a href="#github" id="github"><h3 class="title is-2 ttj-primary is-size-3-mobile"><span class="ttj-white"># </span>{{helper.GH_TITLE}}</h3></a>
-    <hr />
-  </div>
-  <div class="container animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
-    <div class="columns is-multiline">
-      <div *ngFor="let itm of gh_repos" class="column is-half" >
-        <div  class="card box-about" style="height: 100%;" >
-          <div class="card-content">
-            <div class="content ttj-white">
-              <h4 class="ttj-primary is-4">{{itm.name}}</h4>
-              Description: {{itm.description}}
-              <br/>
-              Language: <a class="ttj-primary" href="#">{{itm.language}}</a>
-              <br>
-              Created Date: {{itm.created_at}}
+          <article
+            *ngIf="invalidEmail === true"
+            class="message is-danger"
+            (click)="closeModal($event)"
+          >
+            <div class="message-header">
+              <p>Bad Input!</p>
+              <button class="delete" aria-label="delete"></button>
             </div>
-          </div>
-          <footer class="card-footer" style="border-color: hsl(153, 100%, 50%) !important;">
-            <a href="{{itm.html_url}}" target="_blank" class="card-footer-item ttj-button-primary">Go to Repositories&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a>
-            <button (click)="copyToClipboard(itm.ssh_url)" class="card-footer-item ttj-button-primary">Git Clone&nbsp;<i class="fa-solid fa-copy"></i></button>
-          </footer>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br/>
-  <div class="columns is-mobile is-centered animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
-    <div class="column is-half">
-      <a target="_blank" href="https://github.com/paanjoe" class="button ttj-button-primary is-responsive is-fullwidth">
-        <span class="icon">
-          <i class="fab fa-github"></i>
-        </span>
-        <span>GitHub</span>
-      </a>
-    </div>
-  </div>
-
-
-</section>
-
-<!-- Contact -->
-<section class="section hero-background-dark section-about" id="contact">
-  <div class="section-heading animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
-    <a href="#contact" id="contact"><h3 class="title is-2 ttj-primary is-size-3-mobile"><span class="ttj-white"># </span>{{helper.CONTACT_TITLE}}</h3></a>
-    <hr />
-  </div>
-  <div class="columns is-centered animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
-    <div class="column is-2">
-      <a href="{{helper.CV_LINK}}" target="_blank">
-      <div class="card">
-        <div class="card-content box-about" style="text-align: center;">
-          <i class="fas fa-download fa-2xl" style="color:hsl(153, 100%, 50%) !important;"></i>
-          <br/><br/>
-          Download CV
-        </div>
-      </div>
-    </a>
-    </div>
-    <div class="column is-2">
-      <a href="{{helper.LINKEDIN_LINK}}" target="_blank">
-      <div class="card">
-        <div class="card-content box-about" style="text-align: center;">
-          <i class="fa-brands fa-linkedin fa-2xl" style="color: hsl(153, 100%, 50%);"></i>
-          <br/><br/>
-          LinkedIn
-        </div>
-      </div>
-    </a>
-    </div>
-    <div class="column is-2">
-      <a href="{{helper.GITHUB_LINK}}" target="_blank">
-      <div class="card">
-        <div class="card-content box-about" style="text-align: center;">
-          <i class="fa-brands fa-github-square fa-2xl" style="color: hsl(153,100%, 50%);"></i>
-          <br/><br/>
-          GitHub
-        </div>
-      </div>
-    </a>
-    </div>
-    <div class="column is-2">
-      <a href="{{helper.MEDIUM_LINK}}" target="_blank">
-      <div class="card">
-        <div class="card-content box-about" style="text-align: center;">
-          <i class="fa-brands fa-medium fa-2xl" style="color: hsl(153,100%, 50%);"></i>
-          <br/><br/>
-          Medium
-        </div>
-      </div>
-    </a>
-    </div>
-    <div class="column is-2">
-      <a href="{{helper.DEV_LINK}}" target="_blank">
-      <div class="card">
-        <div class="card-content box-about" style="text-align: center;">
-          <i class="fa-brands fa-dev fa-2xl" style="color: hsl(153,100%, 50%);"></i>
-          <br/><br/>
-          Dev.to
-        </div>
-      </div>
-    </a>
-    </div>
-  </div>
-
-  <div class="columns animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
-    <div class="column">
-      <div class="box box-about">
-        <article *ngIf="contactSuccess === true" class="message is-primary" (click)="closeModal($event)">
-          <div class="message-header">
-            <p>Success!</p>
-            <button class="delete" aria-label="delete"></button>
-          </div>
-          <div class="message-body">
-            Email has been <strong>successfully</strong> sent! Our team will respond to you shortly.
-          </div>
-        </article>
-
-        <article *ngIf="contactFailed === true" class="message is-danger" (click)="closeModal($event)">
-          <div class="message-header">
-            <p>Failed!</p>
-            <button class="delete" aria-label="delete"></button>
-          </div>
-          <div class="message-body">
-            <strong>Opps!</strong> Something went wrong, please try again or contact this site Administrator to asssit you on this.
-          </div>
-        </article>
-
-        <article *ngIf="invalidEmail === true" class="message is-danger" (click)="closeModal($event)">
-          <div class="message-header">
-            <p>Bad Input!</p>
-            <button class="delete" aria-label="delete"></button>
-          </div>
-          <div class="message-body">
-            <strong>Opps!</strong> Please enter a <strong>valid email address</strong> to continue (example@example.com).
-          </div>
-        </article>
-
-        <article *ngIf="invalidInput === true" class="message is-danger" (click)="closeModal($event)">
-          <div class="message-header">
-            <p>Bad Input!</p>
-            <button class="delete" aria-label="delete"></button>
-          </div>
-          <div class="message-body">
-            <strong>Opps!</strong> Please make sure all of the <strong>field are not empty</strong>. PLease try again.
-          </div>
-        </article>
-
-        <!-- <form> -->
-        <div class="field is-horizontal">
-          <div class="field-body">
-            <div class="field">
-              <p class="control is-expanded has-icons-left">
-                <input class="input ttj-input-primary" type="text" name="name" [(ngModel)]="name_contact" placeholder="Your Name">
-                <span class="icon is-small is-left ttj-icon">
-                  <i class="fas fa-user"></i>
-                </span>
-              </p>
+            <div class="message-body">
+              <strong>Opps!</strong> Please enter a
+              <strong>valid email address</strong> to continue
+              (example@example.com).
             </div>
-            <div class="field">
-              <p class="control is-expanded has-icons-left">
-                <input class="input ttj-input-primary" type="email" [(ngModel)]="email_contact" placeholder="Your Email">
-                <span class="icon is-small is-left ttj-icon">
-                  <i class="fas fa-envelope"></i>
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
+          </article>
 
-        <div class="field is-horizontal">
-          <div class="field-body">
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input ttj-input-primary" type="text" [(ngModel)]="subject_contact" placeholder="Subject">
-                <span class="icon is-small is-left ttj-icon">
-                  <i class="fas fa-pen"></i>
-                </span>
+          <article
+            *ngIf="invalidInput === true"
+            class="message is-danger"
+            (click)="closeModal($event)"
+          >
+            <div class="message-header">
+              <p>Bad Input!</p>
+              <button class="delete" aria-label="delete"></button>
+            </div>
+            <div class="message-body">
+              <strong>Opps!</strong> Please make sure all of the
+              <strong>field are not empty</strong>. PLease try again.
+            </div>
+          </article>
+
+          <!-- <form> -->
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input
+                    class="input ttj-input-primary"
+                    type="text"
+                    name="name"
+                    [(ngModel)]="name_contact"
+                    placeholder="Your Name"
+                  />
+                  <span class="icon is-small is-left ttj-icon">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input
+                    class="input ttj-input-primary"
+                    type="email"
+                    [(ngModel)]="email_contact"
+                    placeholder="Your Email"
+                  />
+                  <span class="icon is-small is-left ttj-icon">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </p>
               </div>
             </div>
           </div>
-        </div>
-        
-        <div class="field is-horizontal"> 
-          <div class="field-body">
-            <div class="field">
-              <div class="control has-icons-left">
-                <textarea class="textarea ttj-input-primary" [(ngModel)]="message_contact" placeholder="Message..."></textarea>
+
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <div class="control has-icons-left">
+                  <input
+                    class="input ttj-input-primary"
+                    type="text"
+                    [(ngModel)]="subject_contact"
+                    placeholder="Subject"
+                  />
+                  <span class="icon is-small is-left ttj-icon">
+                    <i class="fas fa-pen"></i>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        <div class="field is-horizontal">
-          <div class="field-body">
-            <div class="field">
-              <div class="control">
-                <button *ngIf="btnContactLoading === false" class="button ttj-button-primary" (click)="contactUs(this.name_contact, this.email_contact, this.subject_contact, this.message_contact)">
-                  {{helper.CONTACT_BUTTON_SEND}}
-                </button>
-                <button *ngIf="btnContactLoading === true" class="button ttj-button-primary is-loading"> </button>
+
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <div class="control has-icons-left">
+                  <textarea
+                    class="textarea ttj-input-primary"
+                    [(ngModel)]="message_contact"
+                    placeholder="Message..."
+                  ></textarea>
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <button
+                    *ngIf="btnContactLoading === false"
+                    class="button ttj-button-primary"
+                    (click)="
+                      contactUs(
+                        this.name_contact,
+                        this.email_contact,
+                        this.subject_contact,
+                        this.message_contact
+                      )
+                    "
+                  >
+                    {{ helper.CONTACT_BUTTON_SEND }}
+                  </button>
+                  <button
+                    *ngIf="btnContactLoading === true"
+                    class="button ttj-button-primary is-loading"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- </form> -->
         </div>
-      <!-- </form> -->
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer class="footer hero-background-dark" style="padding-bottom:2em;">
-  <div class="section-heading">
-    <div class="block ttj-footer">
-      Designed & Built by <strong class="ttj-primary"> PaanJoe</strong>
-      <br/>
-      All Rights Reserved {{currentYear}} &copy; <strong class="ttj-primary"> PaanJoe</strong>
+  <!-- Footer -->
+  <footer class="footer hero-background-dark" style="padding-bottom: 2em">
+    <div class="section-heading">
+      <div class="block ttj-footer">
+        Designed & Built by <strong class="ttj-primary"> PaanJoe</strong>
+        <br />
+        All Rights Reserved {{ currentYear }} &copy;
+        <strong class="ttj-primary"> PaanJoe</strong>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(
+        document.querySelectorAll(".navbar-burger"),
+        0
+      );
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+        // Add a click event on each of them
+        $navbarBurgers.forEach((el) => {
+          el.addEventListener("click", () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
 
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
-
-      // Add a click event on each of them
-      $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
-
-      // Get the target from the "data-target" attribute
-      const target = el.dataset.target;
-      const $target = document.getElementById(target);
-
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      el.classList.toggle('is-active');
-      $target.classList.toggle('is-active');
-
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle("is-active");
+            $target.classList.toggle("is-active");
+          });
+        });
+      }
     });
-  });
-}
-
-});
-</script>
+  </script>
 </div>

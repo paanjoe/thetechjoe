@@ -1,37 +1,37 @@
 {
-    "data": [
-        {
-            "stack": "JavaScript (ES6+)"
-        },
-        {
-            "stack": "TypeScript"
-        },
-        {
-            "stack": "Angular 10+"
-        },
-        {
-            "stack": "ReactJS"
-        },
-        {
-            "stack": "NextJS"
-        },
-        {
-            "stack": "C# / VB.NET"
-        },
-        {
-            "stack": "Python"
-        },
-        {
-            "stack": "NodeJS"
-        },
-        {
-            "stack": ".NET Framework"
-        },
-        {
-            "stack": "Adobe XD/Photoshop/Illustrator"
-        },
-        {
-            "stack": "Firebase/AWS/GCP/Azure"
-        }
-    ]
+  "data": [
+    {
+      "stack": "JavaScript (ES6+)"
+    },
+    {
+      "stack": "TypeScript"
+    },
+    {
+      "stack": "Angular 10+"
+    },
+    {
+      "stack": "ReactJS"
+    },
+    {
+      "stack": "NextJS"
+    },
+    {
+      "stack": "C# / VB.NET"
+    },
+    {
+      "stack": "Python"
+    },
+    {
+      "stack": "NodeJS"
+    },
+    {
+      "stack": ".NET Framework"
+    },
+    {
+      "stack": "Adobe XD/Photoshop/Illustrator"
+    },
+    {
+      "stack": "Firebase/AWS/GCP/Azure"
+    }
+  ]
 }

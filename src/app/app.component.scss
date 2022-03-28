@@ -1,85 +1,83 @@
 .hero-background-dark {
-    background-color: rgb(6, 37, 49);
-    background-image: radial-gradient(#00ff8c33 1.1px, #062531 1.1px);
-    background-size: 22px 22px;
+  background-color: rgb(6, 37, 49);
+  background-image: radial-gradient(#00ff8c33 1.1px, #062531 1.1px);
+  background-size: 22px 22px;
 }
 
 .background-dark {
-    background-color: rgb(6, 37, 49);
+  background-color: rgb(6, 37, 49);
 }
 
 .ttj-primary {
-    color: hsl(153, 100%, 50%) !important;
-    font-family: 'Roboto Mono', monospace !important;
+  color: hsl(153, 100%, 50%) !important;
+  font-family: "Roboto Mono", monospace !important;
 }
 
 .ttj-button-primary {
-    border-color: hsl(153, 100%, 50%) !important;
-    color: hsl(153, 100%, 50%) !important;
-    background-color: transparent;
-    font-family: 'Roboto Mono', monospace !important;
-} 
+  border-color: hsl(153, 100%, 50%) !important;
+  color: hsl(153, 100%, 50%) !important;
+  background-color: transparent;
+  font-family: "Roboto Mono", monospace !important;
+}
 
 .ttj-icon {
-     color:hsl(153, 100%, 50%) !important;
+  color: hsl(153, 100%, 50%) !important;
 }
 
 .ttj-button-primary:hover {
-    background-color: hsla(153, 100%, 50%, 0.144) !important;
-    
+  background-color: hsla(153, 100%, 50%, 0.144) !important;
 }
 
 .ttj-input-primary {
-    border-color: hsl(153, 100%, 50%) !important;
-    color: hsl(153, 100%, 50%) !important;
-    background-color: transparent;
-    font-family: 'Roboto Mono', monospace !important;
- } 
+  border-color: hsl(153, 100%, 50%) !important;
+  color: hsl(153, 100%, 50%) !important;
+  background-color: transparent;
+  font-family: "Roboto Mono", monospace !important;
+}
 
- .ttj-input-primary::placeholder {
-    color: hsla(153, 100%, 50%, 0.459) !important;
- } 
+.ttj-input-primary::placeholder {
+  color: hsla(153, 100%, 50%, 0.459) !important;
+}
 
- .ttj-input-primary:hover {
-    background-color: hsla(153, 100%, 50%, 0.144) !important;
-    transition: box-shadow 0.5s; 
-    box-shadow: 0 0 11px rgb(145, 255, 0);
+.ttj-input-primary:hover {
+  background-color: hsla(153, 100%, 50%, 0.144) !important;
+  transition: box-shadow 0.5s;
+  box-shadow: 0 0 11px rgb(145, 255, 0);
 }
 
 .ttj-white {
-    color: rgb(191, 211, 230) !important;
-    font-family: 'Roboto Mono', monospace !important;
+  color: rgb(191, 211, 230) !important;
+  font-family: "Roboto Mono", monospace !important;
 }
 
 .section-about {
-    padding-left: 15% !important;
-    padding-right: 15% !important;
+  padding-left: 15% !important;
+  padding-right: 15% !important;
 }
 
 .box-about {
-    outline: 0.5px solid hsl(153, 100%, 50%) !important;
-    background-color: rgb(7, 46, 61);
-    color: rgb(191, 211, 230) !important;
+  outline: 0.5px solid hsl(153, 100%, 50%) !important;
+  background-color: rgb(7, 46, 61);
+  color: rgb(191, 211, 230) !important;
 }
 .box-about:hover {
-    outline: 2px solid hsl(153, 100%, 50%) !important;
-    background-color: rgb(7, 46, 61);
-    color: rgb(191, 211, 230) !important;
-    transition: box-shadow 0.5s; 
-    box-shadow: 0 0 11px rgb(145, 255, 0);
+  outline: 2px solid hsl(153, 100%, 50%) !important;
+  background-color: rgb(7, 46, 61);
+  color: rgb(191, 211, 230) !important;
+  transition: box-shadow 0.5s;
+  box-shadow: 0 0 11px rgb(145, 255, 0);
 }
 
 .ttj-footer {
-    text-align: center;
-    color: rgb(191, 211, 230) !important;
-    font-family: 'Roboto Mono', monospace !important;
+  text-align: center;
+  color: rgb(191, 211, 230) !important;
+  font-family: "Roboto Mono", monospace !important;
 }
 
 .ttj-profile-picture {
-    background-repeat: no-repeat, repeat;
-    background-position: center;
-    background-size: cover;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 //
-
