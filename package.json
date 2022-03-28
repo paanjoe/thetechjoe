@@ -20,6 +20,7 @@
     "@angular/router": "~13.1.0",
     "animate.css": "^4.1.1",
     "bulma": "^0.9.3",
+    "firebase": "^9.6.10",
     "ngx-spinner": "^13.1.1",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",

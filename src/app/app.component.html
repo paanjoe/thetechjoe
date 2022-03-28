@@ -2,7 +2,7 @@
 
 
 <div *ngIf="isLoading === true" class="test">
-  <div id="loading"></div>
+
 </div>
 
 
@@ -62,15 +62,15 @@
 <!-- Hero Section -->
 <section class="hero hero-background-dark is-link is-fullheight is-fullheight-with-navbar">
   <div class="hero-body">
-    <div class="container">
-      <p class="ttj-primary is-size-4 animate__animated animate__fadeInDown">{{ helper.HEADER_SUBTITLE_TOP }}</p>
-      <h1 class="is-size-1 ttj-white animate__animated animate__fadeInDown" style="animation-delay: 0.1s;">
+    <div class="container animate__animated animate__zoomInDown" style="animation-duration: 1.5s;">
+      <p class="ttj-primary is-size-4">{{ helper.HEADER_SUBTITLE_TOP }}</p>
+      <h1 class="is-size-1 ttj-white">
         {{ helper.HEADER_TITLE }}
       </h1>
-      <h3 class="subtitle is-4 ttj-primary animate__animated animate__fadeInDown" style="animation-delay: 0.2s;">
+      <h3 class="subtitle is-4 ttj-primary ">
         {{ helper.HEADER_SLOGAN }}
       </h3>
-      <p class="ttj-white subtitle is-5 animate__animated animate__fadeInDown" style="max-width: 610px; text-align: justify; animation-delay: 0.3s; animation-duration: 800ms;">
+      <p class="ttj-white subtitle is-5" style="max-width: 610px; text-align: justify;">
         {{ helper.HEADER_DESCRIPTION }}
       </p>
       <a href="#about" class="button ttj-button-primary" style="max-width: 610px; width: 100%;">
@@ -81,9 +81,9 @@
 </section>
 
 <!-- About Me -->
-<section class="section hero-background-dark section-about" id="about">
-  <div class="section-heading">
-    <h3 class="title is-2 ttj-primary"><span class="ttj-white"># </span>{{helper.ABOUT_TITLE}}</h3>
+<section class="section hero-background-dark section-about">
+  <div class="section-heading animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
+    <a href="#about" id="about"><h3 class="title is-2 ttj-primary is-size-3-mobile"><span class="ttj-white"># </span>{{helper.ABOUT_TITLE}}</h3></a>
     <hr />
     <div class="tile is-ancestor">
       <div class="tile is-parent" >
@@ -122,9 +122,9 @@
 </section>
 
 <!-- Professional Experiences -->
-<section class="section hero-background-dark section-about" id="experiences">
-  <div class="section-heading">
-    <h3 class="title is-2 ttj-primary"><span class="ttj-white"># </span>{{helper.EXP_TITLE}}</h3>
+<section class="section hero-background-dark section-about" >
+  <div class="section-heading animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
+    <a href="#experiences" id="experiences"><h3 class="title is-2 ttj-primary is-size-3-mobile"><span class="ttj-white"># </span>{{helper.EXP_TITLE}}</h3></a>
     <hr />
     <div class="columns">
       <div class="column is-one-third">
@@ -153,15 +153,15 @@
 </section>
 
 <!-- Featured Projects -->
-<section class="section hero-background-dark section-about" id="featured">
-  <div class="section-heading">
-    <h3 class="title is-2 ttj-primary"><span class="ttj-white"># </span>{{helper.FEATURED_TITLE}}</h3>
+<section class="section hero-background-dark section-about">
+  <div class="section-heading animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
+    <a href="#featured" id="featured"><h3 class="title is-2 ttj-primary is-size-3-mobile"><span class="ttj-white"># </span>{{helper.FEATURED_TITLE}}</h3></a>
     <hr />
   </div>
-  <div class="section-body">
-    <div *ngFor="let itm of featured" class="columns is-mobile">
+  <div class="section-body animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
+    <div *ngFor="let itm of featured" class="columns is-desktop">
       <div class="column">
-        <div class="box box-about" style="height: 100%; max-height: 300px;">
+        <div class="box box-about" style="height: 100%; ">
           <div class="content">
             <div class="block ttj-white">
               <h4 class="ttj-primary">{{itm.title}}</h4>
@@ -171,10 +171,11 @@
         </div>
       </div>
       <div class="column is-one-third">
-        <div class="box box-about" style="height: 100%; max-height: 300px;background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;">
+        <div class="box box-about" style="height: 100%;background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;">
           <div class="content">
             <figure class="image is-4by3">
               <img  src="{{itm.imageURL}}">
+              <!-- <img  src="../assets/carilocum.png"> -->
             </figure>
           </div>
         </div>
@@ -184,12 +185,12 @@
 </section>
 
 <!-- GitHub Repositories -->
-<section class="section hero-background-dark section-about" id="github">
-  <div class="section-heading">
-    <h3 class="title is-2 ttj-primary"><span class="ttj-white"># </span>{{helper.GH_TITLE}}</h3>
+<section class="section hero-background-dark section-about">
+  <div class="section-heading animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
+    <a href="#github" id="github"><h3 class="title is-2 ttj-primary is-size-3-mobile"><span class="ttj-white"># </span>{{helper.GH_TITLE}}</h3></a>
     <hr />
   </div>
-  <div class="container">
+  <div class="container animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
     <div class="columns is-multiline">
       <div *ngFor="let itm of gh_repos" class="column is-half" >
         <div  class="card box-about" style="height: 100%;" >
@@ -212,7 +213,7 @@
     </div>
   </div>
   <br/>
-  <div class="columns is-mobile is-centered">
+  <div class="columns is-mobile is-centered animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
     <div class="column is-half">
       <a target="_blank" href="https://github.com/paanjoe" class="button ttj-button-primary is-responsive is-fullwidth">
         <span class="icon">
@@ -228,11 +229,11 @@
 
 <!-- Contact -->
 <section class="section hero-background-dark section-about" id="contact">
-  <div class="section-heading">
-    <h3 class="title is-2 ttj-primary"><span class="ttj-white"># </span>{{helper.CONTACT_TITLE}}</h3>
+  <div class="section-heading animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
+    <a href="#contact" id="contact"><h3 class="title is-2 ttj-primary is-size-3-mobile"><span class="ttj-white"># </span>{{helper.CONTACT_TITLE}}</h3></a>
     <hr />
   </div>
-  <div class="columns is-centered">
+  <div class="columns is-centered animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
     <div class="column is-2">
       <a href="{{helper.CV_LINK}}" target="_blank">
       <div class="card">
@@ -290,10 +291,10 @@
     </div>
   </div>
 
-  <div class="columns">
+  <div class="columns animate__animated animate__fadeInUp" style="animation-duration: 1.5s;">
     <div class="column">
       <div class="box box-about">
-        <article class="message is-primary" (click)="closeModal($event)">
+        <article *ngIf="contactSuccess === true" class="message is-primary" (click)="closeModal($event)">
           <div class="message-header">
             <p>Success!</p>
             <button class="delete" aria-label="delete"></button>
@@ -303,13 +304,33 @@
           </div>
         </article>
 
-        <article class="message is-danger">
+        <article *ngIf="contactFailed === true" class="message is-danger" (click)="closeModal($event)">
           <div class="message-header">
             <p>Failed!</p>
             <button class="delete" aria-label="delete"></button>
           </div>
           <div class="message-body">
             <strong>Opps!</strong> Something went wrong, please try again or contact this site Administrator to asssit you on this.
+          </div>
+        </article>
+
+        <article *ngIf="invalidEmail === true" class="message is-danger" (click)="closeModal($event)">
+          <div class="message-header">
+            <p>Bad Input!</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <strong>Opps!</strong> Please enter a <strong>valid email address</strong> to continue (example@example.com).
+          </div>
+        </article>
+
+        <article *ngIf="invalidInput === true" class="message is-danger" (click)="closeModal($event)">
+          <div class="message-header">
+            <p>Bad Input!</p>
+            <button class="delete" aria-label="delete"></button>
+          </div>
+          <div class="message-body">
+            <strong>Opps!</strong> Please make sure all of the <strong>field are not empty</strong>. PLease try again.
           </div>
         </article>
 
@@ -362,9 +383,10 @@
           <div class="field-body">
             <div class="field">
               <div class="control">
-                <button class="button ttj-button-primary" (click)="contactUs(this.name_contact, this.email_contact, this.subject_contact, this.message_contact)">
+                <button *ngIf="btnContactLoading === false" class="button ttj-button-primary" (click)="contactUs(this.name_contact, this.email_contact, this.subject_contact, this.message_contact)">
                   {{helper.CONTACT_BUTTON_SEND}}
                 </button>
+                <button *ngIf="btnContactLoading === true" class="button ttj-button-primary is-loading"> </button>
               </div>
             </div>
           </div>

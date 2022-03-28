@@ -3,17 +3,17 @@
         {
             "title" : "CariLocum",
             "description": "CariLocum is a web apps that enable Medical Staff to connect with Public/Private healthcare that require extra hands. Since there is no official platform yet in Malaysia, I'll take this opportunity to develop one platform to Medical Staff to find their freelance/oncall/locum in Malaysia.",
-            "imageURL": "https://raw.githubusercontent.com/paanjoe/carilocum/master/src/assets/image/logo.png"
+            "imageURL": "../assets/carilocum.png"
         },
         {
             "title" : "CariDarah",
             "description": "There is always a shortage of blood in Malaysia, hence to help Malaysian to get blood when in needs, CariDarah will act as a central platform to request or donate blood (on-demand). This certaintly will help Healthcare institution to promote their Blood Donation Drive.",
-            "imageURL": "https://play-lh.googleusercontent.com/3KvP_q1aWrvlzdmWajIFeEYVFsTqVPJ18bGaeruwoK3uiNwrqIYM1-y371P-AIIKSPc=s360-rw"
+            "imageURL": "../assets/caridarah.webp"
         },
         {
             "title" : "BagiFree",
             "description": "A fun project where I was thinking what to do with my unused item. It is a waste if I would like to throw it away. Therefore this apps come in where people can list their item in this website to giveaway their unused item to other people who need the item.",
-            "imageURL": "https://bagifree-5e5d4.web.app/assets/images/bagifree-logo.png"
+            "imageURL": "../assets/bagifree.png"
         }   
     ]
 }

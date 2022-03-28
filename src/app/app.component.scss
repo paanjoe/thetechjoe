@@ -26,6 +26,7 @@
 
 .ttj-button-primary:hover {
     background-color: hsla(153, 100%, 50%, 0.144) !important;
+    
 }
 
 .ttj-input-primary {
@@ -41,6 +42,8 @@
 
  .ttj-input-primary:hover {
     background-color: hsla(153, 100%, 50%, 0.144) !important;
+    transition: box-shadow 0.5s; 
+    box-shadow: 0 0 11px rgb(145, 255, 0);
 }
 
 .ttj-white {
@@ -56,14 +59,14 @@
 .box-about {
     outline: 0.5px solid hsl(153, 100%, 50%) !important;
     background-color: rgb(7, 46, 61);
-    // background-color: rgb(6, 37, 49);
     color: rgb(191, 211, 230) !important;
 }
 .box-about:hover {
     outline: 2px solid hsl(153, 100%, 50%) !important;
     background-color: rgb(7, 46, 61);
-    // background-color: rgb(6, 37, 49);
     color: rgb(191, 211, 230) !important;
+    transition: box-shadow 0.5s; 
+    box-shadow: 0 0 11px rgb(145, 255, 0);
 }
 
 .ttj-footer {

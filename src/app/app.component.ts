@@ -27,6 +27,11 @@ export class AppComponent {
   public subject_contact: string = '';
   public message_contact: string = '';
   public isLoading: boolean = false;
+  public contactSuccess: boolean = false;
+  public contactFailed: boolean = false;
+  public invalidInput: boolean = false;
+  public invalidEmail: boolean = false;
+  public btnContactLoading: boolean = false;
 
   constructor(
     private githubServices: GithubService
@@ -71,14 +76,46 @@ export class AppComponent {
   }
 
   contactUs(name: string, email: string, subject: string, message: string) {
-    // validation here
+    this.btnContactLoading = true;
 
-    this.githubServices.sendEmail(name, email, subject, message).subscribe((response) => {
-      console.log('Success, ' + response);
-    });
+    if (name != '' && email != '' && subject != '' && message != '') {
+      let regexp = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+      let checkEmail = regexp.test(email);
+
+      if (checkEmail === false) {
+        this.invalidEmail = true;
+        this.btnContactLoading = false
+        setTimeout(() => {
+          this.invalidEmail = false;
+        }, 3000);
+      } else {
+        this.githubServices.sendEmail(name, email, subject, message).subscribe((response) => {
+          this.contactSuccess = true;
+          this.btnContactLoading = false
+          setTimeout(() => {
+            this.contactSuccess = false;
+          }, 3000);
+        }, (err) => {
+          this.contactFailed = true;
+          this.btnContactLoading = false
+          setTimeout(() => {
+            this.contactFailed = false;
+          }, 3000);
+        });
+      }
+    } else {
+      this.invalidInput = true;
+      this.btnContactLoading = false
+      setTimeout(() => {
+        this.invalidInput = false;
+      }, 3000);
+    }
   }
 
   closeModal(data: any) {
-    console.log(data)
+    this.contactSuccess = false;
+    this.contactFailed = false;
+    this.invalidEmail = false;
+    this.invalidInput = false;
   }
 }
