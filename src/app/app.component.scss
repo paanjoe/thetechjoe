@@ -9,19 +9,19 @@
 }
 
 .ttj-primary {
-  color: hsl(153, 100%, 50%) !important;
+  color: hsl(160, 52%, 45%) !important;
   font-family: "Roboto Mono", monospace !important;
 }
 
 .ttj-button-primary {
-  border-color: hsl(153, 100%, 50%) !important;
-  color: hsl(153, 100%, 50%) !important;
+  border-color: hsl(160, 52%, 45%) !important;
+  color: hsl(160, 52%, 45%) !important;
   background-color: transparent;
   font-family: "Roboto Mono", monospace !important;
 }
 
 .ttj-icon {
-  color: hsl(153, 100%, 50%) !important;
+  color: hsl(160, 52%, 45%) !important;
 }
 
 .ttj-button-primary:hover {
@@ -29,8 +29,8 @@
 }
 
 .ttj-input-primary {
-  border-color: hsl(153, 100%, 50%) !important;
-  color: hsl(153, 100%, 50%) !important;
+  border-color: hsl(160, 52%, 45%) !important;
+  color: hsl(160, 52%, 45%) !important;
   background-color: transparent;
   font-family: "Roboto Mono", monospace !important;
 }
@@ -40,9 +40,9 @@
 }
 
 .ttj-input-primary:hover {
-  background-color: hsla(153, 100%, 50%, 0.144) !important;
+  background-color: hsla(153, 100%, 50%, 0.055) !important;
   transition: box-shadow 0.5s;
-  box-shadow: 0 0 11px rgb(145, 255, 0);
+  box-shadow: 0 0 5px rgb(145, 255, 0);
 }
 
 .ttj-white {
@@ -56,12 +56,12 @@
 }
 
 .box-about {
-  outline: 0.5px solid hsl(153, 100%, 50%) !important;
+  outline: 0.5px solid hsl(160, 52%, 45%) !important;
   background-color: rgb(7, 46, 61);
   color: rgb(191, 211, 230) !important;
 }
 .box-about:hover {
-  outline: 2px solid hsl(153, 100%, 50%) !important;
+  outline: 2px solid hsl(160, 52%, 45%) !important;
   background-color: rgb(7, 46, 61);
   color: rgb(191, 211, 230) !important;
   transition: box-shadow 0.5s;
