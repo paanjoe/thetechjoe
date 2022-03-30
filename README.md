@@ -1,37 +1,49 @@
-# PaanJoe
+<div align="center">
+  <img alt="Logo" src="https://spectacular-khapse-e1d071.netlify.app/assets/logo.png" width="400" />
+</div>
+<h1 align="center">
+  paanjoe.com
+</h1>
+<p align="center">
+  The first iteration of <a href="https://paanjoe.com" target="_blank">paanjoe.com</a> built with <a href="https://angular.io/" target="_blank">Angular</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+<p align="center">
+  <a href="https://app.netlify.com/sites/spectacular-khapse-e1d071/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/a0fe5ce7-25a6-41fa-bcc0-b9b743c30087/deploy-status" alt="Netlify Status" />
+  </a>
+</p>
 
-## Development server
+## 🛠 Installation & Set Up
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Install the Angular CLI
 
-## Code scaffolding
+   ```sh
+   npm install -g @angular/cli
+   ```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
 
-## Build
+   ```sh
+   nvm install
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. Install dependencies
 
-## Running unit tests
+   ```sh
+   npm i or npm install
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. Start the development server
 
-## Running end-to-end tests
+   ```sh
+   npm start
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🚀 Building and Running for Production
 
-## Further help
+1. Generate a full static production build
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-Todo:
-
-1. Animate
-2. Logo
-3. Back-End
-4. Profile Picture
-5. Stack
-6. Resumes
-7. Buy Domain & Deploy
+   ```sh
+   npm run build
+   ```
