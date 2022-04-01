@@ -26,7 +26,7 @@ export enum helper {
   // CONTACT
   CONTACT_TITLE = '<Get In Touch/>',
   CONTACT_BUTTON_SEND = 'Send Message',
-  CV_LINK = 'https://drive.google.com/file/d/1C0syWIhNtPijCAx_PGrN5nlPvtZWAunP/view?usp=sharing',
+  CV_LINK = 'https://resume.paanjoe.com/',
   LINKEDIN_LINK = 'https://www.linkedin.com/in/mohd-farhan-muhamad-fazli-693b7912b/',
   MEDIUM_LINK = 'https://medium.com/@farhan.gunz',
   DEV_LINK = 'https://dev.to/paanjoe',
