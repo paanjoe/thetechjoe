@@ -10,7 +10,7 @@ export enum helper {
   ABOUT_TITLE = '<About Me/>',
   ABOUT_TITLE_PARA = 'Bonjour le monde!',
   ABOUT_PARA = "Hey guys! My name is Farhan Fazli and I love to code and learn new technology stuff. I have an interest in Web and Mobile development! I'm also an Anime lover :). I've worked with multiple organization and always put organization digital transformation objective as my motivation to keep learning. I also love to build random apps that can be used by everyone and also to showcase my capabilities and inspiration!",
-  ABOUT_PICTURE = 'https://scontent.fkul8-1.fna.fbcdn.net/v/t1.6435-9/69980685_3492342597457954_980635909504368640_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=NuSIPzp_VwYAX_l3Nq5&tn=Se7QiE85Jb-QIg3h&_nc_ht=scontent.fkul8-1.fna&oh=00_AT_LCnkYVbGga4ck2KCIY_KFVYeWSBft3EqAKY9M9WMcGg&oe=625F6AAC',
+  ABOUT_PICTURE = 'https://scontent-kut2-2.xx.fbcdn.net/v/t39.30808-6/277305549_7892412894117547_3394979653194414044_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGEWQm3Rvaw96Buf6imUoWr58HJ1hYod9TnwcnWFih31GFnk-VK4HmEY_WjwHKqVMjxW9nonJR9Azb7oj3ykc26&_nc_ohc=FpR292RJi2sAX97A6CX&_nc_ht=scontent-kut2-2.xx&oh=00_AT8BE6jIHpkqsTnaMyPcxS3dJ0mdWC1woYLjsiSzEq7Anw&oe=62A3FAD1',
   ABOUT_STACK_TITLE = 'Stack',
 
   // EXPERIENCES
